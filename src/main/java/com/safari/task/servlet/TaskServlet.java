@@ -1,14 +1,6 @@
 package com.safari.task.servlet;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
-import java.io.IOException;
-import java.io.PrintWriter;
 
 public class TaskServlet extends HttpServlet {
     // Lifecycle ---- initial ------
@@ -30,23 +22,23 @@ public class TaskServlet extends HttpServlet {
     // Lifecycle ---- during running ------
 
    // it will accept all servlets such as ftp servlet (plz read the implementation)
-    @Override
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-        super.service(req, res);
-    }
+//    @Override
+//    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+//        super.service(req, res);
+//    }
 
     // it will accept only http servlet request
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        if (req.getMethod().equals("GET")) {
-            resp.setContentType("text/html");
-
-            PrintWriter out = resp.getWriter();
-            out.println("<html><body>");
-            out.println("<h1>" + "Ronin" + "</h1>");
-            out.println("</body></html>");
-        }
-    }
+//    @Override
+//    protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+//        if (req.getMethod().equals("GET")) {
+//            resp.setContentType("text/html");
+//
+//            PrintWriter out = resp.getWriter();
+//            out.println("<html><body>");
+//            out.println("<h1>" + "Ronin" + "</h1>");
+//            out.println("</body></html>");
+//        }
+//    }
 
     // Lifecycle ---- I am dying ------
     public void destroy() {

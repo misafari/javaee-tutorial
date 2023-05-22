@@ -5,6 +5,10 @@ public class Task {
     private final String name;
     private final boolean isDone;
 
+    public Task(String name) {
+        this(0, name, false);
+    }
+
     public Task(long id, String name, boolean isDone) {
         this.id = id;
         this.name = name;
