@@ -61,7 +61,7 @@ public class TaskDataAccess {
     }
 
     private void insert(Task task) {
-        try (var statement = getConnection().prepareStatement("insert into task values(?,?)")) {
+        try (var statement = getConnection().prepareStatement("insert into task(name, is_done) values(?,?)")) {
             statement.setString(1, task.getName());
             statement.setBoolean(2, task.isDone());
 
